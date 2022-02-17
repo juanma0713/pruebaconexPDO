@@ -7,8 +7,8 @@ class conexion{
     function conectar(){
 
         try{
-        $pdo = new PDO('mysql: host=localhost; dbname=conexpdo', $this->user, $this->pass); 
-        echo " conexion exitosa ------------";
+        $pdo = new PDO('mysql: host=localhost; dbname=conexpdo',$this->user,$this->pass); 
+        echo " ----------conexion exitosa ------------";
         }
         catch(PDOException $error){
             echo "no se pude conectar" . $error->getMessage();
@@ -19,4 +19,4 @@ class conexion{
 }
 
 $nuevaconexion = new  conexion();
-$nuevaconexion->conectar();
+$nuevaconexion -> conectar();
